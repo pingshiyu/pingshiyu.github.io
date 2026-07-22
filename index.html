@@ -214,7 +214,7 @@
 
     .entry {
       display: grid;
-      grid-template-columns: 4rem 1fr;
+      grid-template-columns: 4.2rem 1fr;
       gap: 1.25rem;
       padding: 0 0 2rem;
     }
@@ -226,6 +226,7 @@
       color: var(--muted);
       font-family: "Courier New", Courier, monospace;
       font-size: 0.82rem;
+      white-space: nowrap;
     }
 
     .entry-title {
@@ -264,6 +265,27 @@
     .compact-list .meta::before {
       content: "· ";
     }
+
+    .work-list .entry-title { display: block; }
+
+    .work-list .entry-organisation { margin-left: 0; }
+
+    .work-list .entry-organisation::before { content: none; }
+
+    section.dense-section { padding-block: 1.35rem; }
+
+    .dense-list .entry {
+      grid-template-columns: 4.2rem 1fr;
+      gap: 0.65rem;
+      padding-bottom: 0.42rem;
+    }
+
+    .dense-list .entry-title {
+      font-size: 0.96rem;
+      line-height: 1.35;
+    }
+
+    .dense-list .entry:last-child { padding-bottom: 0; }
 
     .language-list,
     .skill-list {
@@ -317,7 +339,7 @@
       }
 
       .entry {
-        grid-template-columns: 3.5rem 1fr;
+        grid-template-columns: 4rem 1fr;
         gap: 0.8rem;
       }
     }
@@ -335,11 +357,12 @@
         <nav aria-label="Primary navigation">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#activities">Activities</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#service">Service</a></li>
-            <li><a href="#activities">Activities</a></li>
             <li><a href="#languages">Languages</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
@@ -372,54 +395,6 @@
           </div>
         </div>
       </div>
-
-      <section id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Experience</h2>
-        <div class="section-body">
-          <ol class="entry-list">
-            <li class="entry">
-              <span class="entry-year">2022–now</span>
-              <div>
-                <p class="entry-title">PhD Student in Computer Science</p>
-                <p class="entry-organisation">Imperial College London</p>
-                <p class="meta">London</p>
-              </div>
-            </li>
-            <li class="entry">
-              <span class="entry-year">2025–26</span>
-              <div>
-                <p class="entry-title">Research Intern</p>
-                <p class="entry-organisation">Huawei Research</p>
-                <p class="meta">Programming Languages Lab · Edinburgh</p>
-              </div>
-            </li>
-            <li class="entry">
-              <span class="entry-year">2020–22</span>
-              <div>
-                <p class="entry-title">Software Engineer / Quantitative Developer</p>
-                <p class="entry-organisation">Credit Suisse</p>
-                <p class="meta">London</p>
-              </div>
-            </li>
-            <li class="entry">
-              <span class="entry-year">2020</span>
-              <div>
-                <p class="entry-title">Research Intern</p>
-                <p class="entry-organisation">Cambridge Quantum Computing (now Quantinuum)</p>
-                <p class="meta">Cambridge</p>
-              </div>
-            </li>
-            <li class="entry">
-              <span class="entry-year">2016–20</span>
-              <div>
-                <p class="entry-title">Mathematics and Computer Science</p>
-                <p class="entry-organisation">St Anne's College, University of Oxford</p>
-                <p class="meta">Oxford</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
 
       <section id="publications" aria-labelledby="publications-heading">
         <h2 id="publications-heading">Publications</h2>
@@ -480,75 +455,90 @@
         </div>
       </section>
 
-      <section id="awards" aria-labelledby="awards-heading">
-        <h2 id="awards-heading">Awards</h2>
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
         <div class="section-body">
           <ol class="entry-list">
             <li class="entry">
-              <span class="entry-year">2022–27</span>
+              <span class="entry-year">2022–now</span>
               <div>
-                <p class="entry-title">Full Doctoral Scholarship</p>
+                <p class="entry-title">PhD in Computer Science</p>
                 <p class="entry-organisation">Imperial College London</p>
+                <p class="meta">London</p>
               </div>
             </li>
             <li class="entry">
-              <span class="entry-year">2024</span>
+              <span class="entry-year">2016–20</span>
               <div>
-                <p class="entry-title">Poster Presentation Award</p>
-                <p class="entry-organisation">Imperial Computing Conference</p>
-              </div>
-            </li>
-            <li class="entry">
-              <span class="entry-year">2019, 20</span>
-              <div>
-                <p class="entry-title">Exhibition Award</p>
+                <p class="entry-title">Mathematics and Computer Science</p>
                 <p class="entry-organisation">St Anne's College, University of Oxford</p>
+                <p class="meta">Oxford</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section id="service" aria-labelledby="service-heading">
-        <h2 id="service-heading">Service</h2>
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">Work Experience</h2>
         <div class="section-body">
-          <ol class="entry-list compact-list">
+          <ol class="entry-list compact-list work-list">
             <li class="entry">
-              <span class="entry-year">2026</span>
+              <span class="entry-year">2025–26</span>
               <div>
-                <p class="entry-title">Subreviewer</p>
-                <p class="entry-organisation">POPL</p>
+                <p class="entry-title">Research Intern</p>
+                <p class="entry-organisation">Huawei Research</p>
+                <p class="meta">Programming Languages Lab · Edinburgh</p>
               </div>
             </li>
             <li class="entry">
-              <span class="entry-year">2025</span>
+              <span class="entry-year">2020–22</span>
               <div>
-                <p class="entry-title">Artifact Evaluation Reviewer</p>
-                <p class="entry-organisation">FormaliSE</p>
+                <p class="entry-title">Software Engineer / Quantitative Strategist</p>
+                <p class="entry-organisation">Credit Suisse</p>
+                <p class="meta">London</p>
               </div>
             </li>
             <li class="entry">
-              <span class="entry-year">2025</span>
+              <span class="entry-year">2020</span>
               <div>
-                <p class="entry-title">Subreviewer</p>
-                <p class="entry-organisation">FSE</p>
+                <p class="entry-title">Research Intern</p>
+                <p class="entry-organisation">Cambridge Quantum Computing (now Quantinuum)</p>
+                <p class="meta">Cambridge</p>
               </div>
             </li>
             <li class="entry">
-              <span class="entry-year">2024</span>
+              <span class="entry-year">2019</span>
               <div>
-                <p class="entry-title">Subreviewer</p>
-                <p class="entry-organisation">ASE</p>
+                <p class="entry-title">Intern</p>
+                <p class="entry-organisation">Credit Suisse</p>
+                <p class="meta">London</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2018</span>
+              <div>
+                <p class="entry-title">Data Science Intern</p>
+                <p class="entry-organisation">Arm</p>
+                <p class="meta">Cambridge</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2017,18</span>
+              <div>
+                <p class="entry-title">Research Intern</p>
+                <p class="entry-organisation">University of Oxford</p>
+                <p class="meta"><a href="https://www.politics.ox.ac.uk/">DPIR</a> · Oxford</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section id="activities" aria-labelledby="activities-heading">
+      <section class="dense-section" id="activities" aria-labelledby="activities-heading">
         <h2 id="activities-heading">Activities</h2>
         <div class="section-body">
-          <ol class="entry-list compact-list">
+          <ol class="entry-list compact-list dense-list">
             <li class="entry">
               <span class="entry-year">2026</span>
               <div>
@@ -587,7 +577,7 @@
             <li class="entry">
               <span class="entry-year">2024</span>
               <div>
-                <p class="entry-title">Invited talk at ETH Zürich</p>
+                <p class="entry-title"><a href="https://ast.ethz.ch/">Invited talk at ETH Zürich</a></p>
                 <p class="meta">Zürich</p>
               </div>
             </li>
@@ -644,6 +634,71 @@
         </div>
       </section>
 
+      <section class="dense-section" id="awards" aria-labelledby="awards-heading">
+        <h2 id="awards-heading">Awards</h2>
+        <div class="section-body">
+          <ol class="entry-list compact-list dense-list">
+            <li class="entry">
+              <span class="entry-year">2022–27</span>
+              <div>
+                <p class="entry-title">Full Doctoral Scholarship</p>
+                <p class="entry-organisation">Imperial College London</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2024</span>
+              <div>
+                <p class="entry-title">Poster Presentation Award</p>
+                <p class="entry-organisation">Imperial Computing Conference</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2019,20</span>
+              <div>
+                <p class="entry-title">Exhibition Award</p>
+                <p class="entry-organisation">St Anne's College, University of Oxford</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="dense-section" id="service" aria-labelledby="service-heading">
+        <h2 id="service-heading">Service</h2>
+        <div class="section-body">
+          <ol class="entry-list compact-list dense-list">
+            <li class="entry">
+              <span class="entry-year">2026</span>
+              <div>
+                <p class="entry-title">Subreviewer</p>
+                <p class="entry-organisation">POPL</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2025</span>
+              <div>
+                <p class="entry-title">Artifact Evaluation Reviewer</p>
+                <p class="entry-organisation">FormaliSE</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2025</span>
+              <div>
+                <p class="entry-title">Subreviewer</p>
+                <p class="entry-organisation">FSE</p>
+              </div>
+            </li>
+            <li class="entry">
+              <span class="entry-year">2024</span>
+              <div>
+                <p class="entry-title">Subreviewer</p>
+                <p class="entry-organisation">ASE</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
       <section id="languages" aria-labelledby="languages-heading">
         <h2 id="languages-heading">Languages</h2>
         <div class="section-body">
@@ -654,7 +709,7 @@
             <li>Haskell <span class="meta">proficient</span></li>
             <li>Python <span class="meta">fluent</span></li>
             <li>C++ <span class="meta">fluent</span></li>
-            <li>etc. <span class="meta">same old :)</span></li>
+            <li>701st programming language <span class="meta">fluent, probably</span></li>
           </ul>
         </div>
       </section>
