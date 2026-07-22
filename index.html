@@ -224,6 +224,27 @@
       font-size: 0.8rem;
     }
 
+    .protected-email {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      font: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+      cursor: pointer;
+    }
+
+    .protected-email:hover,
+    .protected-email:focus-visible { color: var(--accent); }
+
+    .protected-email:focus-visible {
+      outline: 1px dotted var(--accent);
+      outline-offset: 3px;
+    }
+
     section {
       display: grid;
       grid-template-columns: 7.5rem minmax(0, 1fr);
@@ -428,14 +449,15 @@
           <h1>Pingshi (Jacob) Yu <span class="chinese-name" lang="zh-Hans">于洴石</span></h1>
           <p class="lede">
             I'm a final-year PhD student at Imperial College London, supervised
-            by Alastair Donaldson and Nicolas Wu. I'm interested in the theory
-            and practice of developing software systems: either how to find bugs when 
-            they do occur, or how to them in the first place. My research thus far 
-            took me on a journey through compiler testing, language semantics, 
-            complexity theory and automated verification.
+            by Prof. <a href="https://www.doc.ic.ac.uk/~afd/">Alastair Donaldson</a>
+            and Prof. <a href="https://zenzike.com/">Nicolas Wu</a>. I'm interested in the
+            theory and practice of developing software systems: either how to find
+            bugs when they occur or how to avoid them in the first place. My research
+            thus far has taken me on a journey through compiler testing, language semantics,
+            property-based testing, complexity theory, and automated verification.
           </p>
           <div class="contact-links" aria-label="Contact links">
-            <a href="mailto:email-protected">Email</a>
+            <button class="protected-email" id="protected-email" type="button">Email</button>
             <a href="https://scholar.google.com/citations?user=hbgX7rEAAAAJ&amp;hl=en">Google Scholar</a>
             <a href="https://github.com/pingshiyu/">GitHub</a>
             <a href="https://www.linkedin.com/in/jacob-pingshi-yu/">LinkedIn</a>
@@ -589,91 +611,91 @@
             <li class="entry">
               <span class="entry-year">2026</span>
               <div>
-                <p class="entry-title"><a href="https://vetss.org.uk/event/vetss-summer-school-2026/">VeTSS Summer School</a></p>
+                <p class="entry-title"><a href="https://vetss.org.uk/event/vetss-summer-school-2026/">Attendee at VeTSS Summer School</a></p>
                 <p class="meta">Exeter</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2025</span>
               <div>
-                <p class="entry-title"><a href="https://www.asplos-conference.org/asplos2025/">ASPLOS presentation</a></p>
+                <p class="entry-title"><a href="https://www.asplos-conference.org/asplos2025/">Presentation at ASPLOS</a></p>
                 <p class="meta">Rotterdam</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2025</span>
               <div>
-                <p class="entry-title"><a href="https://www.imperial.ac.uk/news/articles/research-groups/cyber-security/2025/imperial-sets-out-cyber-security-research-priorities/">ACE-CSR Conference</a></p>
+                <p class="entry-title"><a href="https://www.imperial.ac.uk/news/articles/research-groups/cyber-security/2025/imperial-sets-out-cyber-security-research-priorities/">Attendee at ACE-CSR Conference</a></p>
                 <p class="meta">Lancaster</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2024</span>
               <div>
-                <p class="entry-title"><a href="https://lapras-imperial.github.io/">LaPRaS talk</a></p>
+                <p class="entry-title"><a href="https://lapras-imperial.github.io/">Presentation at LaPRaS</a></p>
                 <p class="meta">London · <a href="assets/slides/Jacob-LaPRaS.pdf">Slides</a></p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2024</span>
               <div>
-                <p class="entry-title"><a href="https://wp.doc.ic.ac.uk/vss24/">VeTSS Summer School</a></p>
+                <p class="entry-title"><a href="https://wp.doc.ic.ac.uk/vss24/">Attendee at VeTSS Summer School</a></p>
                 <p class="meta">Bristol</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2024</span>
               <div>
-                <p class="entry-title"><a href="https://ast.ethz.ch/">Invited talk at ETH Zürich</a></p>
+                <p class="entry-title"><a href="https://ast.ethz.ch/">Invited presentation at ETH Zürich</a></p>
                 <p class="meta">Zürich</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2024</span>
               <div>
-                <p class="entry-title"><a href="https://popl24.sigplan.org/">POPL</a></p>
+                <p class="entry-title"><a href="https://popl24.sigplan.org/">Attendee at POPL</a></p>
                 <p class="meta">London</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2023</span>
               <div>
-                <p class="entry-title"><a href="https://events.model.in.tum.de/mod23/">Marktoberdorf Summer School</a></p>
+                <p class="entry-title"><a href="https://events.model.in.tum.de/mod23/">Attendee at Marktoberdorf Summer School</a></p>
                 <p class="meta">Marktoberdorf</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2023</span>
               <div>
-                <p class="entry-title"><a href="https://conf.researchr.org/home/issta-2023">ISSTA presentation</a></p>
+                <p class="entry-title"><a href="https://conf.researchr.org/home/issta-2023">Presentation at ISSTA</a></p>
                 <p class="meta">Seattle</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2023</span>
               <div>
-                <p class="entry-title"><a href="https://conf.researchr.org/track/ecoop-issta-2023/ecoop-issta-2023-doctoral-symposium">ECOOP/ISSTA Doctoral Symposium</a></p>
+                <p class="entry-title"><a href="https://conf.researchr.org/track/ecoop-issta-2023/ecoop-issta-2023-doctoral-symposium">Presentation at ECOOP/ISSTA Doctoral Symposium</a></p>
                 <p class="meta">Seattle</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2023</span>
               <div>
-                <p class="entry-title"><a href="https://discourse.llvm.org/t/eurollvm-2023-may-10-11-glasgow-scotland/67844">EuroLLVM Developers' Conference</a></p>
+                <p class="entry-title"><a href="https://discourse.llvm.org/t/eurollvm-2023-may-10-11-glasgow-scotland/67844">Attendee at EuroLLVM Developers' Conference</a></p>
                 <p class="meta">Glasgow</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2023</span>
               <div>
-                <p class="entry-title"><a href="https://plrg-bristol.github.io/fir/">Fun in the REPL talk</a></p>
+                <p class="entry-title"><a href="https://plrg-bristol.github.io/fir/">Presentation at Fun in the REPL</a></p>
                 <p class="meta">Bristol</p>
               </div>
             </li>
             <li class="entry">
               <span class="entry-year">2022</span>
               <div>
-                <p class="entry-title"><a href="https://pliss.org/2022/">PLISS Summer School</a></p>
+                <p class="entry-title"><a href="https://pliss.org/2022/">Attendee at PLISS Summer School</a></p>
                 <p class="meta">Bertinoro</p>
               </div>
             </li>
@@ -796,7 +818,30 @@
 
     const root = document.documentElement;
     const themeToggle = document.getElementById('theme-toggle');
+    const protectedEmail = document.getElementById('protected-email');
     const savedTheme = localStorage.getItem('theme');
+
+    protectedEmail.addEventListener('click', function () {
+      const firstNumber = Math.floor(Math.random() * 8) + 2;
+      const secondNumber = Math.floor(Math.random() * 8) + 2;
+      const answer = window.prompt(
+        `Human check: what is ${firstNumber} + ${secondNumber}?`
+      );
+
+      if (answer === null) return;
+
+      if (Number(answer.trim()) !== firstNumber + secondNumber) {
+        window.alert('That answer was not correct. Please try again.');
+        return;
+      }
+
+      const emailCharacterCodes = [
+        112, 46, 121, 117, 50, 50, 64, 105, 109, 112, 101, 114, 105, 97, 108,
+        46, 97, 99, 46, 117, 107
+      ];
+      const emailAddress = String.fromCharCode(...emailCharacterCodes);
+      window.location.href = `mailto:${emailAddress}`;
+    });
 
     if (savedTheme === 'light') {
       root.dataset.theme = 'light';
