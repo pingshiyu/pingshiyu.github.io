@@ -134,49 +134,19 @@
 
     .intro {
       display: grid;
-      grid-template-columns: 7.5rem minmax(0, 1fr);
+      grid-template-columns: 10rem minmax(0, 1fr);
       gap: 2rem;
       align-items: start;
       padding-bottom: 3.5rem;
     }
 
-    .portrait-placeholder {
-      position: relative;
-      overflow: hidden;
+    .portrait {
+      display: block;
       width: 100%;
+      height: auto;
       aspect-ratio: 4 / 5;
       border: 1px solid var(--ink);
-      background: color-mix(in srgb, var(--ink) 7%, transparent);
-    }
-
-    .portrait-placeholder::before {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        105deg,
-        transparent 25%,
-        color-mix(in srgb, var(--ink) 14%, transparent) 45%,
-        transparent 65%
-      );
-      content: "";
-      transform: translateX(-100%);
-      animation: portrait-loading 1.8s ease-in-out infinite;
-    }
-
-    .portrait-placeholder::after {
-      position: absolute;
-      right: 0.65rem;
-      bottom: 0.55rem;
-      color: var(--muted);
-      content: "loading…";
-      font-family: "Courier New", Courier, monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    @keyframes portrait-loading {
-      to { transform: translateX(100%); }
+      object-fit: cover;
     }
 
     .eyebrow,
@@ -399,8 +369,8 @@
         gap: 1.5rem;
       }
 
-      .portrait-placeholder {
-        width: 7rem;
+      .portrait {
+        width: 9rem;
       }
 
       .entry {
@@ -411,7 +381,6 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .portrait-placeholder::before { animation: none; }
     }
   </style>
 </head>
@@ -442,7 +411,13 @@
 
     <main>
       <div class="intro" id="about">
-        <div class="portrait-placeholder" role="img" aria-label="Portrait loading placeholder"></div>
+        <img
+          class="portrait"
+          src="assets/images/portrait.jpg"
+          alt="Portrait of Pingshi Yu"
+          width="2062"
+          height="2589"
+        >
         <div>
           <p class="eyebrow">PhD student · Computer Science</p>
           <h1>Pingshi (Jacob) Yu <span class="chinese-name" lang="zh-Hans">于洴石</span></h1>
