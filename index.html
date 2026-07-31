@@ -799,7 +799,7 @@
       const firstNumber = Math.floor(Math.random() * 8) + 2;
       const secondNumber = Math.floor(Math.random() * 8) + 2;
       const answer = window.prompt(
-        `Human check: what is ${firstNumber} + ${secondNumber}?`
+        `To see the email, answer: what is ${firstNumber} + ${secondNumber}?`
       );
 
       if (answer === null) return;
@@ -809,12 +809,20 @@
         return;
       }
 
-      const emailCharacterCodes = [
-        112, 46, 121, 117, 50, 50, 64, 105, 109, 112, 101, 114, 105, 97, 108,
-        46, 97, 99, 46, 117, 107
+      const encodedEmail = [
+        338, 368, 155, 314, 308, 155, 341, 308, 332, 359, 320, 353, 344, 332,
+        209, 167, 167, 368, 380, 155, 353
       ];
-      const emailAddress = String.fromCharCode(...emailCharacterCodes);
-      window.location.href = `mailto:${emailAddress}`;
+      const emailAddress = String.fromCharCode(
+        ...encodedEmail.map(value => (value - 17) / 3).reverse()
+      );
+      const emailLink = document.createElement('a');
+      emailLink.className = protectedEmail.className;
+      emailLink.href = `mailto:${emailAddress}`;
+      emailLink.textContent = emailAddress;
+      emailLink.setAttribute('aria-label', `Email ${emailAddress}`);
+      protectedEmail.replaceWith(emailLink);
+      emailLink.focus();
     });
 
     if (savedTheme === 'light') {
