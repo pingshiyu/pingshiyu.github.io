@@ -1,0 +1,169 @@
+% Adapted from the Star Rover template by Subidit.
+% Source: https://github.com/subidit/rover-resume/tree/main/templates/star%20rover
+% License: CC BY 4.0 (see TEMPLATE-LICENSE.md)
+\documentclass[11pt]{article}
+
+% Star Rover uses Fira Sans upstream. Use LaTeX's built-in sans-serif family so
+% the CV also compiles when the optional FiraSans package is unavailable.
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+
+% List formatting
+\usepackage{enumitem}
+\setlist[itemize]{nosep,left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+
+% Title formatting
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{%
+  \leavevmode
+  \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+
+% Star Rover entry helpers
+\newcommand{\aux}[1]{$|$ \space {\normalfont\itshape #1}}
+\newcommand{\rside}[1]{\hfill {\normalfont\color{accent} #1}}
+
+% Footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray}Pingshi Yu -- Page \thepage\ of \pageref*{LastPage}}
+
+\usepackage{multicol}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+\newcommand{\linkicon}{{\color{gray}\footnotesize[link]}}
+
+\begin{document}
+
+% Banner
+\begin{center}
+  {\fontsize{32}{36}\fontseries{heavy}\selectfont\color{accent}
+    PINGSHI (JACOB) YU}\\[5pt]
+  London, UK \quad
+  \href{mailto:p.yu22@imperial.ac.uk}{p.yu22@imperial.ac.uk} \quad
+  \href{https://pingshiyu.github.io}{pingshiyu.github.io}\\[3pt]
+  \href{https://github.com/pingshiyu}{GitHub: pingshiyu} \quad
+  \href{https://www.linkedin.com/in/jacob-pingshi-yu/}{LinkedIn} \quad
+  \href{https://scholar.google.com/citations?user=hbgX7rEAAAAJ}{Google Scholar}
+\end{center}
+
+\section{Research Profile}
+
+Final-year Computer Science PhD student studying the theory and practice of reliable software systems: how to find bugs when they occur and how to avoid them in the first place. Research spans compiler testing, programming-language semantics, property-based testing, complexity theory, and automated verification. Supervised by Prof. Alastair F. Donaldson and Prof. Nicolas Wu.
+
+\section{Education}
+
+\subsection{Imperial College London \aux{PhD in Computer Science} \rside{2022--present}}
+\begin{itemize}
+  \item Research on compiler testing, composable semantics, property-based testing, and the complexity of randomised testing.
+  \item Full doctoral scholarship, 2022--2027.
+\end{itemize}
+
+\subsection{University of Oxford, St Anne's College \aux{MMathCompSci} \rside{2016--2020}}
+\begin{itemize}
+  \item Mathematics and Computer Science; first-class master's year (80.3\%).
+  \item Dissertation: \textit{Systematic Pruning Methods for the Enumeration of Realistic Molecules}.
+  \item Exhibition Awards in 2019 and 2020.
+\end{itemize}
+
+\section{Publications}
+
+\begin{enumerate}
+  \item \textbf{Pingshi Yu}, Chengsong Tan, Nicolas Wu, and Alastair F. Donaldson. ``Complexity Theory of Randomised Testing.'' arXiv, 2026. \href{https://arxiv.org/abs/2607.11811}{Paper \linkicon}
+  \item \textbf{Pingshi Yu}, Nicolas Wu, and Alastair F. Donaldson. ``Ratte: Fuzzing for Miscompilations in Multi-Level Compilers Using Composable Semantics.'' \textit{ASPLOS}, 2025. \href{https://doi.org/10.1145/3676641.3716270}{DOI \linkicon}
+  \item Mayank Sharma, \textbf{Pingshi Yu}, and Alastair F. Donaldson. ``RustSmith: Random Differential Compiler Testing for Rust.'' \textit{ISSTA}, 2023. \href{https://doi.org/10.1145/3597926.3604919}{DOI \linkicon}
+  \item \textbf{Pingshi Yu}. ``Reasoning about MLIR Semantics through Effects and Handlers.'' \textit{ECOOP/ISSTA Doctoral Symposium}, 2023. \href{https://doi.org/10.1145/3597926.3605239}{DOI \linkicon}
+  \item \textbf{Pingshi Yu}, Alistair J. Sterling, and Jotun Hein. ``A Novel Automated Screening Method for Combinatorially Generated Small Molecules.'' \textit{Journal of Chemical Information and Modeling}, 2021. \href{https://doi.org/10.1021/acs.jcim.0c01462}{DOI \linkicon}
+\end{enumerate}
+
+\section{Research and Industry Experience}
+
+\subsection{Huawei Research \rside{Edinburgh, UK}}
+\subsubsection{Research Intern, Programming Languages Lab \rside{2025--2026}}
+\begin{itemize}
+  \item Researched the implementation and application of effect handlers for Huawei's open-source Cangjie programming language.
+\end{itemize}
+
+\subsection{Credit Suisse \rside{London, UK}}
+\subsubsection{Software Engineer / Quantitative Strategist \rside{2020--2022}}
+\begin{itemize}
+  \item Developed a foreign-exchange market-making platform and led delivery of NLP-derived market-data pipelines into its pricing engine.
+  \item Built tools for quantitative research, model validation, release management, performance monitoring, and developer productivity using Python, C++, Docker, Jenkins, JavaScript, and Elasticsearch.
+\end{itemize}
+
+\subsection{Cambridge Quantum Computing (now Quantinuum) \rside{Cambridge, UK}}
+\subsubsection{Research Intern \rside{2020}}
+\begin{itemize}
+  \item Reviewed ZX-calculus research and implemented a scalable graphical calculus in C++ for representing and simplifying large quantum circuits.
+\end{itemize}
+
+\subsection{Credit Suisse \rside{London, UK}}
+\subsubsection{Technology Intern \rside{2019}}
+\begin{itemize}
+  \item Delivered two production projects and identified an optimisation yielding approximately $900\times$ faster bulk SQL inserts in an internal Perl API.
+\end{itemize}
+
+\subsection{Arm \rside{Cambridge, UK}}
+\subsubsection{Data Science Intern \rside{2018}}
+\begin{itemize}
+  \item Initiated and delivered the automated data-processing backend for a company-wide capacity-planning project.
+\end{itemize}
+
+\subsection{University of Oxford, DPIR \rside{Oxford, UK}}
+\subsubsection{Research Intern \rside{2017, 2018}}
+\begin{itemize}
+  \item Built a Python pipeline to process roughly 10,000 statutory instruments; later designed data-gathering and sentiment-analysis validation questionnaires.
+\end{itemize}
+
+\section{Selected Talks and Research Activities}
+
+\begin{description}[style=multiline,leftmargin=4.8em]
+  \item[2026] VeTSS Summer School, Exeter --- attendee.
+  \item[2025] ASPLOS, Rotterdam --- presentation of \textit{Ratte}; ACE-CSR Conference, Lancaster --- attendee.
+  \item[2024] ETH Z\"urich --- invited presentation; LaPRaS, London --- presentation; VeTSS Summer School, Bristol; POPL, London.
+  \item[2023] ISSTA and ECOOP/ISSTA Doctoral Symposium, Seattle --- presentations; Fun in the REPL, Bristol --- presentation; Marktoberdorf Summer School; EuroLLVM Developers' Conference.
+  \item[2022] Programming Languages Implementation Summer School (PLISS), Bertinoro.
+\end{description}
+
+\section{Awards and Service}
+
+\begin{description}[style=multiline,leftmargin=5.8em]
+  \item[2022--27] Full Doctoral Scholarship, Imperial College London.
+  \item[2024] Poster Presentation Award, Imperial Computing Conference.
+  \item[2019, 2020] Exhibition Award, St Anne's College, University of Oxford.
+  \item[2026] Subreviewer, POPL.
+  \item[2025] Artifact Evaluation Reviewer, FormaliSE; subreviewer, FSE.
+  \item[2024] Subreviewer, ASE.
+\end{description}
+
+\section{Technical Skills and Languages}
+
+\begin{description}[style=multiline,leftmargin=8.5em]
+  \item[Programming] Haskell, Python, C++; experience with Agda, Java, Scala, Perl, and MATLAB.
+  \item[Tools \& methods] Git, Unix, Docker, Jenkins, SQL, Pandas, TensorFlow, \LaTeX; compilers, property-based testing, language semantics, algorithms, statistics, and machine learning.
+  \item[Languages] Chinese (native), English (native), German (basic).
+  \item[Interests] Piano (Chopin and ragtime), cycling, chess, geocaching, and road trips.
+\end{description}
+
+\vspace{6pt}
+\begin{center}
+  {\small\color{gray}Last updated August 2026}
+\end{center}
+
+\end{document}
