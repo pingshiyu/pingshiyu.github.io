@@ -1,0 +1,145 @@
+% Industry research CV, adapted from Star Rover by Subidit (CC BY 4.0).
+% See TEMPLATE-LICENSE.md.
+\documentclass[10pt]{article}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,margin=0.78in]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+
+\usepackage{enumitem}
+\setlist[itemize]{nosep,left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em,itemsep=2pt}
+\setlist[description]{itemsep=0pt}
+
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{%
+  \leavevmode\xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*3}{*0.8}
+\titlespacing{\subsection}{0pt}{*2}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+\newcommand{\aux}[1]{$|$ \space {\normalfont\itshape #1}}
+\newcommand{\rside}[1]{\hfill {\normalfont\color{accent} #1}}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray}Pingshi Yu -- Industry Research CV -- Page \thepage\ of \pageref*{LastPage}}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+\newcommand{\linkicon}{{\color{gray}\footnotesize[link]}}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{30}{34}\fontseries{heavy}\selectfont\color{accent}
+    PINGSHI (JACOB) YU}\\[4pt]
+  {\large Research Scientist / Research Engineer --- Programming Languages and Software Reliability}\\[5pt]
+  London, UK \quad
+  \href{mailto:p.yu22@imperial.ac.uk}{p.yu22@imperial.ac.uk} \quad
+  \href{https://pingshiyu.github.io}{pingshiyu.github.io}\\[2pt]
+  \href{https://github.com/pingshiyu}{GitHub: pingshiyu} \quad
+  \href{https://www.linkedin.com/in/jacob-pingshi-yu/}{LinkedIn} \quad
+  \href{https://scholar.google.com/citations?user=hbgX7rEAAAAJ}{Google Scholar}
+\end{center}
+
+\section{Profile}
+
+Final-year Computer Science PhD researcher combining programming-languages theory with practical systems implementation. In my research, I build methods and tools for finding compiler bugs and reasoning about software correctness. This work spans fuzzing, composable compiler semantics, property-based testing, complexity theory, and automated verification. Prior industry experience includes programming-language research, quantitative engineering for an FX market-making platform, quantum software, and data engineering.
+
+\section{Education}
+
+\subsection{Imperial College London \aux{PhD in Computer Science} \rside{2022--present}}
+Full doctoral scholarship. Research on compiler testing, composable semantics, property-based testing, and the complexity of randomised testing. Supervised by Prof. Alastair F. Donaldson and Prof. Nicolas Wu.
+
+\subsection{University of Oxford, St Anne's College \aux{MMathCompSci} \rside{2016--2020}}
+Mathematics and Computer Science; first-class master's year (80.3\%). Dissertation: \textit{Systematic Pruning Methods for the Enumeration of Realistic Molecules}.
+
+\section{Research Highlights}
+
+\subsection{Compiler Testing and Composable Semantics \rside{Imperial College London}}
+\begin{itemize}
+  \item Developed \textit{Ratte}, a semantics-driven approach to fuzzing multi-level compilers for miscompilations; published and presented at ASPLOS 2025.
+  \item Researched effect-handler-based semantics for composable compiler IRs, connecting executable language semantics with automated compiler validation.
+  \item Contributed to \textit{RustSmith}, a random differential testing tool for the Rust compiler, published at ISSTA 2023.
+\end{itemize}
+
+\subsection{Theory of Randomised Testing \rside{Imperial College London}}
+\begin{itemize}
+  \item Developed a complexity-theoretic account of randomised testing, linking practical testing strategies with formal questions about bug-finding difficulty; released on arXiv in 2026.
+\end{itemize}
+
+\subsection{Effect Handlers for Cangjie \rside{Huawei Research}}
+\begin{itemize}
+  \item Researched novel applications of effect handlers---a programming-language feature---for software testing in Huawei's open-source Cangjie programming language.
+\end{itemize}
+
+\section{Industry and Research Experience}
+
+\subsection{Huawei Research \rside{Edinburgh, UK}}
+\subsubsection{Research Intern, Programming Languages Lab \rside{2025--2026}}
+\begin{itemize}
+  \item Researched novel applications of effect handlers (a programming-language feature) for software testing in Huawei's open-source Cangjie programming language.
+\end{itemize}
+
+\subsection{Credit Suisse \rside{London, UK}}
+\subsubsection{Software Engineer / Quantitative Strategist \rside{2020--2022}}
+\begin{itemize}
+  \item Developed components of a production foreign-exchange market-making platform.
+  \item Led delivery of NLP-derived market-data pipelines into the pricing engine, coordinating technical direction across quantitative, support, and data teams.
+  \item Built services for quantitative research, model validation, release management, performance monitoring, and developer productivity.
+  \item Worked with Python, C++, Docker, Jenkins, JavaScript, Boost, SQL, and Elasticsearch.
+\end{itemize}
+
+\subsection{Cambridge Quantum Computing (now Quantinuum) \rside{Cambridge, UK}}
+\subsubsection{Research Intern \rside{2020}}
+\begin{itemize}
+  \item Surveyed ZX-calculus research and implemented a scalable graphical calculus in C++ for representing, reasoning about, and simplifying large quantum circuits.
+\end{itemize}
+
+\subsection{Earlier Engineering and Data Experience \rside{2017--2019}}
+\begin{itemize}
+  \item \textbf{Credit Suisse:} delivered two production projects and identified an optimisation yielding approximately $900\times$ faster bulk SQL inserts in an internal Perl API.
+  \item \textbf{Arm:} initiated and delivered the automated data-processing backend for a company-wide capacity-planning project.
+  \item \textbf{University of Oxford DPIR:} built a Python pipeline to process roughly 10,000 statutory instruments and designed validation materials for sentiment analysis.
+\end{itemize}
+
+\section{Publications}
+
+\begin{enumerate}
+  \item \textbf{Pingshi Yu}, Chengsong Tan, Nicolas Wu, and Alastair F. Donaldson. ``Complexity Theory of Randomised Testing.'' arXiv, 2026. \href{https://arxiv.org/abs/2607.11811}{Paper \linkicon}
+  \item \textbf{Pingshi Yu}, Nicolas Wu, and Alastair F. Donaldson. ``Ratte: Fuzzing for Miscompilations in Multi-Level Compilers Using Composable Semantics.'' \textit{ASPLOS}, 2025. \href{https://doi.org/10.1145/3676641.3716270}{DOI \linkicon}
+  \item Mayank Sharma, \textbf{Pingshi Yu}, and Alastair F. Donaldson. ``RustSmith: Random Differential Compiler Testing for Rust.'' \textit{ISSTA}, 2023. \href{https://doi.org/10.1145/3597926.3604919}{DOI \linkicon}
+  \item \textbf{Pingshi Yu}. ``Reasoning about MLIR Semantics through Effects and Handlers.'' \textit{ECOOP/ISSTA Doctoral Symposium}, 2023. \href{https://doi.org/10.1145/3597926.3605239}{DOI \linkicon}
+  \item \textbf{Pingshi Yu}, Alistair J. Sterling, and Jotun Hein. ``A Novel Automated Screening Method for Combinatorially Generated Small Molecules.'' \textit{Journal of Chemical Information and Modeling}, 2021. \href{https://doi.org/10.1021/acs.jcim.0c01462}{DOI \linkicon}
+\end{enumerate}
+
+\section{Technical Skills}
+
+\begin{description}[style=multiline,leftmargin=9.5em]
+  \item[Programming] Haskell, Python, C++; experience with Agda, Java, Scala, Perl, and MATLAB.
+  \item[Research areas] Compilers, fuzzing, property-based testing, programming-language semantics, effect systems and handlers, algorithms, automated verification, complexity theory.
+  \item[Engineering] Git, Unix, Docker, Jenkins, SQL, Boost, Pandas, TensorFlow, Elasticsearch, \LaTeX.
+  \item[Languages] Chinese (native), English (native), German (basic).
+\end{description}
+
+\section{Recognition}
+
+\begin{itemize}
+  \item Full Doctoral Scholarship, Imperial College London, 2022--2027.
+  \item Poster Presentation Award, Imperial Computing Conference, 2024.
+  \item Invited research presentation at ETH Z\"urich, 2024; paper presentations at ASPLOS 2025 and ISSTA 2023.
+  \item Exhibition Awards, St Anne's College, University of Oxford, 2019 and 2020.
+\end{itemize}
+
+\vspace{4pt}
+\begin{center}{\small\color{gray}Last updated August 2026}\end{center}
+
+\end{document}
