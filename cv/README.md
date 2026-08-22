@@ -35,7 +35,3 @@ sudo apt install texlive-latex-extra
 ```
 
 Alternatively, upload the folder to Overleaf and compile there with pdfLaTeX.
-
-The contents were refreshed in August 2026 from the personal homepage and
-`../cv-old.tex`. The homepage was treated as authoritative when the sources
-disagreed.
