@@ -1,0 +1,166 @@
+% Simplified Chinese translation of main.tex; keep its content and dates in sync.
+% Adapted from the Star Rover template by Subidit.
+% Source: https://github.com/subidit/rover-resume/tree/main/templates/star%20rover
+% License: CC BY 4.0 (see TEMPLATE-LICENSE.md)
+% Compile with XeLaTeX (see README.md).
+\documentclass[11pt]{article}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setsansfont{Latin Modern Sans}
+% Noto includes 洴 in the author's name, which the Fandol fonts omit.
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+\setcounter{secnumdepth}{0}
+
+\usepackage{enumitem}
+\setlist[itemize]{nosep,left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+
+% Keep the original ruled headings without letter-spacing Chinese characters.
+\usepackage{xhfill}
+\newcommand{\midrule}[1]{%
+  \leavevmode\xrfill[.5ex]{1pt}[accent]~#1~\xrfill[.5ex]{1pt}[accent]}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*2}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries}
+\newcommand{\aux}[1]{$|$ \space {\normalfont #1}}
+\newcommand{\rside}[1]{\hfill {\normalfont\color{accent} #1}}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray}于洴石（Pingshi Yu）--- 第 \thepage\ 页，共 \pageref*{LastPage} 页}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+\hypersetup{pdftitle={于洴石 — 学术简历},pdfauthor={Pingshi Yu},pdflang={zh-CN}}
+\newcommand{\linkicon}{{\color{gray}\footnotesize[链接]}}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{30}{36}\bfseries\color{accent}于洴石}\\[5pt]
+  {\large\color{accent}PINGSHI (JACOB) YU}\\[5pt]
+  英国伦敦 \quad
+  \href{mailto:p.yu22@imperial.ac.uk}{p.yu22@imperial.ac.uk} \quad
+  \href{https://pingshiyu.github.io}{pingshiyu.github.io}\\[3pt]
+  \href{https://github.com/pingshiyu}{GitHub: pingshiyu} \quad
+  \href{https://www.linkedin.com/in/jacob-pingshi-yu/}{LinkedIn} \quad
+  \href{https://scholar.google.com/citations?user=hbgX7rEAAAAJ}{Google Scholar}
+\end{center}
+
+\section{研究概况}
+
+计算机科学博士在读，现处于博士最后一年，研究可靠软件系统的理论与实践：如何发现软件缺陷，以及如何从源头避免缺陷。研究涉及编译器测试、编程语言语义、基于性质的测试、复杂性理论和自动化验证。导师为 Alastair F. Donaldson 教授和 Nicolas Wu 教授。
+
+\section{教育背景}
+
+\subsection{帝国理工学院 \aux{计算机科学博士在读} \rside{2022--至今}}
+\begin{itemize}
+  \item 研究方向：编译器测试、可组合语义、基于性质的测试，以及随机化测试的复杂性。
+  \item 获全额博士奖学金，资助期为 2022--2027 年。
+\end{itemize}
+
+\subsection{牛津大学圣安妮学院 \rside{2016--2020}}
+\subsubsection{数学与计算机科学硕士（MMathCompSci）}
+\begin{itemize}
+  \item 数学与计算机科学专业；硕士学年成绩达一等水平（80.3\%）。
+  \item 学位论文：《用于枚举合理分子结构的系统性剪枝方法》（\textit{Systematic Pruning Methods for the Enumeration of Realistic Molecules}）。
+  \item 于 2019 年和 2020 年获 Exhibition 奖。
+\end{itemize}
+
+\section{学术论文}
+
+% Retain published titles and author names for accurate citation and lookup.
+\begin{enumerate}
+  \item \textbf{Pingshi Yu}, Chengsong Tan, Nicolas Wu, and Alastair F. Donaldson. ``Complexity Theory of Randomised Testing.'' arXiv, 2026. \href{https://arxiv.org/abs/2607.11811}{论文 \linkicon}
+  \item \textbf{Pingshi Yu}, Nicolas Wu, and Alastair F. Donaldson. ``Ratte: Fuzzing for Miscompilations in Multi-Level Compilers Using Composable Semantics.'' \textit{ASPLOS}, 2025. \href{https://doi.org/10.1145/3676641.3716270}{DOI \linkicon}
+  \item Mayank Sharma, \textbf{Pingshi Yu}, and Alastair F. Donaldson. ``RustSmith: Random Differential Compiler Testing for Rust.'' \textit{ISSTA}, 2023. \href{https://doi.org/10.1145/3597926.3604919}{DOI \linkicon}
+  \item \textbf{Pingshi Yu}. ``Reasoning about MLIR Semantics through Effects and Handlers.'' \textit{ECOOP/ISSTA Doctoral Symposium}, 2023. \href{https://doi.org/10.1145/3597926.3605239}{DOI \linkicon}
+  \item \textbf{Pingshi Yu}, Alistair J. Sterling, and Jotun Hein. ``A Novel Automated Screening Method for Combinatorially Generated Small Molecules.'' \textit{Journal of Chemical Information and Modeling}, 2021. \href{https://doi.org/10.1021/acs.jcim.0c01462}{DOI \linkicon}
+\end{enumerate}
+
+\section{科研与业界经历}
+
+\subsection{华为研究院 \rside{英国爱丁堡}}
+\subsubsection{编程语言实验室 · 科研实习生 \rside{2025--2026}}
+\begin{itemize}
+  \item 研究效应处理器在华为开源仓颉编程语言中的实现与应用。
+\end{itemize}
+
+\subsection{瑞士信贷（Credit Suisse）\rside{英国伦敦}}
+\subsubsection{软件工程师 / 量化策略师 \rside{2020--2022}}
+\begin{itemize}
+  \item 开发外汇做市平台，并主导将基于自然语言处理的市场数据流水线接入定价引擎。
+  \item 使用 Python、C++、Docker、Jenkins、JavaScript 和 Elasticsearch，构建用于量化研究、模型验证、版本发布管理、性能监控及提升开发效率的工具。
+\end{itemize}
+
+\subsection{Cambridge Quantum Computing \rside{英国剑桥}}
+\subsubsection{科研实习生 \aux{公司现名 Quantinuum} \rside{2020}}
+\begin{itemize}
+  \item 调研 ZX 演算相关研究，并以 C++ 实现可扩展的图形演算系统，用于表示和简化大规模量子电路。
+\end{itemize}
+
+\subsection{瑞士信贷（Credit Suisse）\rside{英国伦敦}}
+\subsubsection{技术实习生 \rside{2019}}
+\begin{itemize}
+  \item 交付两个投入生产使用的项目，并发现一项优化方法，使内部 Perl API 的 SQL 批量插入速度提升约 $900\times$。
+\end{itemize}
+
+\subsection{Arm \rside{英国剑桥}}
+\subsubsection{数据科学实习生 \rside{2018}}
+\begin{itemize}
+  \item 发起并完成面向全公司的容量规划项目所需的自动化数据处理后端。
+\end{itemize}
+
+\subsection{牛津大学政治与国际关系系（DPIR）\rside{英国牛津}}
+\subsubsection{科研实习生 \rside{2017、2018}}
+\begin{itemize}
+  \item 构建 Python 数据处理流水线，处理约 10,000 份法定文书；随后设计用于数据采集及情感分析验证的问卷。
+\end{itemize}
+
+\section{部分学术报告与研究活动}
+
+\begin{description}[style=multiline,leftmargin=4.8em]
+  \item[2026] 在中国人民大学作关于随机化生成复杂性的报告；参加 VeTSS 暑期学校（埃克塞特）。
+  \item[2025] 在 ASPLOS（鹿特丹）报告 \textit{Ratte}；参加 ACE-CSR 会议（兰卡斯特）。
+  \item[2024] 在苏黎世联邦理工学院（ETH Z\"urich）作受邀报告；在 LaPRaS（伦敦）作报告；参加 VeTSS 暑期学校（布里斯托尔）及 POPL（伦敦）。
+  \item[2023] 在 ISSTA 及 ECOOP/ISSTA 博士生论坛（西雅图）作报告；在 Fun in the REPL（布里斯托尔）作报告；参加 Marktoberdorf 暑期学校及 EuroLLVM 开发者大会。
+  \item[2022] 参加编程语言实现暑期学校（PLISS，贝尔蒂诺罗）。
+\end{description}
+
+\section{奖项与学术服务}
+
+\begin{description}[style=multiline,leftmargin=6.5em]
+  \item[2022--2027] 帝国理工学院全额博士奖学金。
+  \item[2024] 帝国理工学院计算机学术会议海报展示奖。
+  \item[2019、2020] 牛津大学圣安妮学院 Exhibition 奖。
+  \item[2026] POPL 外审审稿人（Subreviewer）。
+  \item[2025] FormaliSE 研究工件评审人（Artifact Evaluation Reviewer）；FSE 外审审稿人。
+  \item[2024] ASE 外审审稿人。
+\end{description}
+
+\section{技术技能与语言}
+
+\begin{description}[style=multiline,leftmargin=6.5em]
+  \item[编程语言] Haskell、Python、C++；亦有 Agda、Java、Scala、Perl 和 MATLAB 使用经验。
+  \item[工具与方法] Git、Unix、Docker、Jenkins、SQL、Pandas、TensorFlow、\LaTeX；编译器、基于性质的测试、语言语义、算法、统计学和机器学习。
+  \item[自然语言] 中文（母语）、英语（母语）、德语（基础）。
+  \item[兴趣爱好] 钢琴（肖邦作品及拉格泰姆音乐）、骑行、国际象棋、地理寻宝（geocaching）和自驾旅行。
+\end{description}
+
+\vspace{6pt}
+\begin{center}
+  {\small\color{gray}最后更新：2026 年 10 月}
+\end{center}
+
+\end{document}
